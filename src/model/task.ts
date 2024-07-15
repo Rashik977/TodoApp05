@@ -55,7 +55,6 @@ export const findTaskById = (id: number): Task | undefined => {
 };
 
 export const updateTask = (id: number, updatedData: Task, index: number) => {
-  console.log(index, updatedData);
   tasks[index] = { ...tasks[index], ...updatedData };
 };
 
