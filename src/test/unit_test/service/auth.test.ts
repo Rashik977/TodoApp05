@@ -24,7 +24,7 @@ describe("Auth Service", () => {
   });
 
   // test cases for login
-  describe.only("login", () => {
+  describe("login", () => {
     it("should login user", async () => {
       bcryptHashStub.returns("hashedPassword");
       getUserByEmailStub = sinon.stub(UserService, "getUserByEmail").returns({

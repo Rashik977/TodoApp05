@@ -4,7 +4,7 @@ import authRoutes from "../../routes/auth";
 
 import expect from "expect";
 
-describe.only("Auth Integration Test Suite", () => {
+describe("Auth Integration Test Suite", () => {
   const app = express();
 
   app.use(express.json());
