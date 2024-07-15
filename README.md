@@ -1,14 +1,11 @@
-Running it on your own machine:
-
-1. pull the docker image using: docker pull rashik977/todo:1.0
-2. run the image using your own .env file (contents of the env are in .env.example), run command : docker run --env-file .env -p 3000:3000 rashik977/todo:1.0
-3. use Postman(or your choice of HTTP client) to run CRUD on todo tasks.
+Note: this assignment wasn't dockerized as it was related to testing only.
 
 Executing:
-1. use GET '/' or '/tasks' to get all the tasks.
-2. use GET '/tasks/:id' to get the task of that id.
-3. use POST '/tasks' to create a task by parsing a JSON with the title and status of the task.
-   note: status is an enum of "not started", "pending" and "done", anything else will result in an error in the API.
-5. use PUT '/tasks/:id' to update that task.
-6. use DELETE '/tasks/:id' to delete that task.
-7. Porper error handling is impleted into the API.
+1. copy the git repo, and use "npm i" to install all dependencies.
+2. create a .env file and add the port and jwt secret(view the .env.example), (note: leave TEST_JWT as empty for now)
+3. use "npm start" to start the application.
+4. use Postman or other HTTP client and go to localhost:[PORT]/auth/login and provide the route with {email:"super@super.com", password:"1234"},
+5. After which you will get an access token, copy and paste it into the created .env file as a TEST_JWT.
+6. Now you can use "npm run test"  for all the task and user services unit test cases.
+7. And use "npm run test:integration" for all the integration test for all the routes.
+8. Play around in the test folder in the src for different results.
